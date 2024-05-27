@@ -1,1 +1,2 @@
-puts 100
+puts 10
+puts 34
