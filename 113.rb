@@ -1,9 +1,9 @@
 # QUESTION 1
 # Write code to store 3 different numbers in three different variables.
 # Then write the code to print the three variables added together.
-x = "1"
-y = "2"
-z = "3"
+x = 1
+y = 2
+z = 3
 puts x
 puts x + y + z
 
