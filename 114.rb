@@ -15,7 +15,7 @@ puts z
 # of yet is whether or not this has to do with the fact we placed a print statement or wether it would
 # always be this way. I just need to play with this some more when I have some more time :)
 
-# QUESTION 2
+# QUESTION 2.
 # Write comments for the remaining lines to describe in your own words
 # what is happening line by line with the following code.
 mars = 4               # Make a variable called mars and set the value to 4
