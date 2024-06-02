@@ -28,13 +28,11 @@ puts word                # 10
 
 index = 0             # 1
 while index > 2       # 2 
-  puts index          # 3 
-  index = index + 1   # 4 
+  puts index          
+  index = index + 1   
 end 
-puts "Done!"          # 5
+puts "Done!"          # 3
 
 # 1: index  equals 0
-# 2:  index is 0 which is  not greater than 2
-# 3: print index 
-# 4: index becomes 1 which still isn't greater than 2 loop ends
-# 5 prints "Done!" because the loop was illogical and wouldn't run
+# 2:  index is 0 which is  not greater than 2 loop ends
+# 3: prints "Done!"
