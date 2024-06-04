@@ -5,7 +5,7 @@
 number = 1
 
 while number <= 20
-  if number == 7 || number == 15
+  if number == 7 or number == 15   #can use || or or 
     puts number.to_s + " Hey, that's my lucky number!"
   else
     puts number
