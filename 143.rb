@@ -13,14 +13,8 @@ pp city_populations
 # in the my_pets hash equals 2. However, the code doesn't work.
 # Explain why the code doesn't work and fix the mistake.
 
-# It doesn't work because this is hash and not an array It cannot be fixed and still stay as a hash
-# This could be fixed by turning it into an array reading exactly what the Hash is reading 
-# I'm no sure if this is what your looking for but it could read as the folliwng
-# my_pets = [""dogs" => 2 ", ""cats" => 1" , ""fish" => 5"]
-# if my_pets[2] == "dogs" (which is does not)
-# puts "i have 2 dogs"
-#end   (which would do nothing as my_pets[2]= "fish => 5") in this array 
+# just needed to switch 2 with dogs in the if statement 
 my_pets = { "dogs" => 2, "cats" => 1, "fish" => 5 }
-if my_pets[2] == "dogs" 
+if my_pets["dogs"] == 2 
   puts "I have 2 dogs!"
 end 
