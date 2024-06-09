@@ -21,7 +21,7 @@ end
 # Rewrite the code using a while loop so the program will run *forever* unless 
 # the user enters a name of Bob.
 index = 0
-while index = +1.0/0.0 
+while index >= 0
   puts "What is your name?"  
   name = gets.chomp
   if name == "Bob"
