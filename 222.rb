@@ -24,6 +24,5 @@ if x < 5
 elsif x < 10
     puts 1
 else 
-    x < 100
     puts 2
 end
