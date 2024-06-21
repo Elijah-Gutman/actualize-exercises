@@ -82,32 +82,37 @@ if apple > carrot
     p 1
   else
     p 2
-  end
-  if banana == 2
+    if banana == 2
     p 3
-  else
+    else
     p 4
+    end
   end
 elsif apple == carrot
   if apple > 1
     p 5
   else
     p 6
-  end
-  if banana == 2
+    if banana == 2
     p 7
-  else
+    else
     p 8
+    end
   end
 else
   if apple > 1
     p 9
   else
     p 10
-  end
-  if banana == 2
+    if banana == 2
     p 11
-  else
+    else
     p 12
+    end
   end
 end
+
+# I did my best to fix the indentation, the code runs. Also its confused because the code you
+# gave me as an example didn't run. If I made an error again I'm fundementally not
+# understanding what the core conept issue is. I made sure the code functioned before 
+# checking with AI to make sure i had no errors as well 
