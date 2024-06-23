@@ -83,9 +83,9 @@ if apple > carrot
   else
     p 2
     if banana == 2
-    p 3
+      p 3
     else
-    p 4
+      p 4
     end
   end
 elsif apple == carrot
@@ -94,9 +94,9 @@ elsif apple == carrot
   else
     p 6
     if banana == 2
-    p 7
+      p 7
     else
-    p 8
+      p 8
     end
   end
 else
@@ -105,14 +105,9 @@ else
   else
     p 10
     if banana == 2
-    p 11
+      p 11
     else
-    p 12
+      p 12
     end
   end
 end
-
-# I did my best to fix the indentation, the code runs. Also its confusing because the code you
-# gave me as an example didn't run. If I made an error again I'm fundementally not
-# understanding what the core conept issue is. I made sure the code functioned before 
-# checking with AI to make sure i had no errors as well 
