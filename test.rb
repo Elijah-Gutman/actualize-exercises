@@ -1,19 +1,18 @@
-puts "type out a word"
 
-typed_word = gets.chomp
-second_word = []
-index = 0
+dogs = [
+  { name: "Toto", breed: "Cairn Terrier" },
+  { name: "Snoopy", breed: "Beagle" },
+  { name: "Beethoven", breed: "Saint Bernard" }
+]
 
+# Initialize an empty array to store the names
+dog_names = []
 
-while index < typed_word.length
-    #second_word.push(typed_word[index])
-    second_word = typed_word.split(//)
-    second_word.pop()
-
-    pigly_word = second_word + second_word[0] + "ay"
-    index = index + 1
+# Iterate through each hash in the dogs array
+dogs.each do |dog|
+  # Access the value associated with the :name key and add it to the dog_names array
+  dog_names << dog[:name]
 end
 
-#second_word.pop(0)
-
-puts pigly_word
+# Print the resulting array of names
+puts dog_names.inspect
