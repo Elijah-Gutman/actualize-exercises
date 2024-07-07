@@ -9,6 +9,12 @@
 # That is, the second array should look like: [4, 6, 1, 2, 8, 3, 7]
 # The one catch: Don't use the "uniq" method available to arrays!That would do this for you
 
+
+# Below is the following iterations of all the attempts made before finally succeeding
+# at the end, I could NOT figure this one out with API's and previous knowledge
+# Only with great difficult and some crafty use of chat GPT did the answers finally
+# come for this particular one 
+
 numbers = [4, 6, 1, 4, 2, 8, 3, 4, 1, 7]
 # arr_numbers=  [
 #     {
