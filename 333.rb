@@ -10,6 +10,9 @@
 # Note: If you run the code p 9 / 2, it prints 4 even though the result should be 4.5. 
 # This is because when dividing integers in Ruby, the result will be an integer. 
 
+
+# ALL OF THE COMMENTS ARE PREVIOUS ITERATIONS OF CODE. 
+
 # puts "enter 5 numbers with a comma after each"
 # average_number = gets.chomp
 # def multiple_values

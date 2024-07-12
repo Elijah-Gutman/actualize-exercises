@@ -10,6 +10,9 @@
 #   apple, banana, orange, pear, apple, pear, apple, squash, apple, pear
 # The program will say: "apple was your most common word"
 # (That's because apple appeared in the user's list 4 times, more than any other word.)
+# 
+# To Be honest this wasn't a very hard one, the method used  below was very easy to 
+# both find online and undestand after a little reading 
 
 
 index = 0
