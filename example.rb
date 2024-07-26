@@ -1,1 +1,2 @@
-puts 10
+letters = %w(a aa aaa aaaa)
+pp letters
