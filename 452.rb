@@ -3,9 +3,9 @@
 # where the length of each string is 4 or fewer letters.
 # Then run the method and print the result.
 # 
-def smaller(string)
+def smaller(string1)
   max_length = 4
-  return string.select { |str| str.length < max_length }
+  return string1.select { |string| string.length < max_length }
 end
 pp smaller(["hello", "the", "people", "are"])
 
