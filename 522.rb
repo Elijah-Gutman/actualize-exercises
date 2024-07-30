@@ -28,7 +28,7 @@
 #     return new_cars << cars[0]
 #   end
 # end
-
+pp cars[0]["model"]
 # pp car_array()
 
 
