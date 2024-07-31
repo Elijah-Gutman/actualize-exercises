@@ -1,0 +1,9 @@
+h1, h2 {
+    color: green;
+}
+ol{
+    color: red;
+}
+li.this{
+    color: blue;
+}
