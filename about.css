@@ -1,0 +1,54 @@
+body {
+    max-width: 50em;
+    margin: 0 auto;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+main {
+    line-height: 1.5;
+    padding: 4em 1em;
+}
+h2{
+    margin-top: 1em;
+    padding-top: 5em;
+    border: 1px black solid;
+}
+a{
+    color:red
+}
+header{
+    color: white;
+    background-image: url("https://img.freepik.com/premium-photo/wall-papers-energy-flow-background-cool-wallpapers-cute-wallpapers-wallpaper-phone-cool-backgrounds-cute-backgrounds_947865-2533.jpg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+header h1{
+    text-align: center;
+    color: white;
+    font-size: 2.5em;
+    font-weight: 300;
+}
+footer{
+    text-align: center;
+    background-color: aliceblue;
+    padding: 3em;
+}
+
+header a{
+    background: blue;
+    color: white;
+    border:  1px solid green;
+    border-radius: 2em;
+    font-size: .6em;
+    letter-spacing: 0.2em;
+    padding: 1em 2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition-property: color, background;
+    transition-duration: 200ms;
+}
+header a:hover{
+    background: green;
+    color: white;
+}
