@@ -13,30 +13,14 @@ puts "And a time you would like to see a movie on a 24 hour clock, example 3 pm 
 time = gets.chomp.to_i
 if age <= 12 
   ticket_price = 5
-elsif age => 13 or <= 59 
+elsif age >= 13 or age <= 59 
   if time < 18
     ticket_price = 7
   else
-      ticket_price = 10
+    ticket_price = 10
   end
-elseif age >= 60
-ticket_price = 7
+elsif age >= 60
+  ticket_price = 7
 end
 
 puts "Ticket price: $#{ticket_price}"
-# 
-# age = 50
-# time = 12
-# if age <= 12
-#   ticket_price = 5
-# elsif age >= 13 && age <= 59
-#   if time < 18
-#     ticket_price = 7
-#   else
-#     ticket_price = 10
-#   end
-# elsif age >= 60
-#   ticket_price = 7
-# end
-
-# puts "Ticket price: $#{ticket_price}"
