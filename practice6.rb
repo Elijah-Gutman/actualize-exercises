@@ -11,4 +11,8 @@ class Product
 end
 product = Product.new("android"," 300$" ,{ brand: "pixel4a", color: "black" })
 
-puts "Product Name: #{product.name}, Price: #{product.price}, brand: #{product.metadata[:brand]}, color: #{product.metadata[:color]}"
+puts "Product Name: #{product.name}, 
+Price: #{product.price}, 
+brand: #{product.metadata[:brand]}, 
+color: #{product.metadata[:color]}"
+
