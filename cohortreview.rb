@@ -219,39 +219,92 @@
 #    index = index + 1
 # end
 
-# QUESTION 1
-# Write a method that takes in four numbers and returns the numbers added together.
-# Then run the method and print the result. 
-# (Note: you do not need to make a custom class for this exercise, just a method)
+# # QUESTION 1
+# # Write a method that takes in four numbers and returns the numbers added together.
+# # Then run the method and print the result. 
+# # (Note: you do not need to make a custom class for this exercise, just a method)
 
-class Numbers
-  def initialize(first_number, second_number, third_number, fourth_number)
-    @first_number = first_number
-    @second_number = second_number
-    @third_number = third_number
-    @fourth_number = fourth_number
+# class Numbers
+#   def initialize(first_number, second_number, third_number, fourth_number)
+#     @first_number = first_number
+#     @second_number = second_number
+#     @third_number = third_number
+#     @fourth_number = fourth_number
+#   end
+#   def sum 
+#     puts @first_number + @second_number + @third_number + @fourth_number
+#   end
+# end
+  
+# numbers= Numbers.new(1, 2, 3, 4)
+
+# numbers.sum
+
+
+# # QUESTION 2
+# # Write a class called Shoe that stores attributes for name, color, and price.
+# # Then make an instance of a shoe and print out the details using `pp`.
+# # (Note: for this problem, just make the initialize method in the class, no other methods needed)
+# class Shoe
+#   def initialize(name, color, price)
+#     @name = name
+#     @color = color
+#     @price = price
+#   end
+# end
+#   shoe= Shoe.new("yeezy", "black", 520)
+
+#   pp shoe
+#   
+
+# QUESTION 1
+# Revise the Song class so that it reflects idiomatic Ruby conventions.
+class Song
+  attr_reader :title, :artist, :lyrics
+  attr_writer :title, :artist, :lyrics
+  def initialize(title, artist, lyrics)
+    @title = title
+    @artist = artist
+    @lyrics = lyrics
   end
-  def sum 
-    puts @first_number + @second_number + @third_number + @fourth_number
+
+  def set_title(title)
+    @song_title = title
+  end
+  
+  def title
+    return @song_title
+  end
+
+  def set_artist(artist)
+    @song_artist = artist
+  end
+
+  def artist
+    return @song_artist
+  end
+
+  def set_lyrics(lyrics)
+    @song_lyrics = lyrics
+  end
+
+  def lyrics
+    return @song_lyrics
   end
 end
-  
-numbers= Numbers.new(1, 2, 3, 4)
-
-numbers.sum
 
 
 # QUESTION 2
-# Write a class called Shoe that stores attributes for name, color, and price.
-# Then make an instance of a shoe and print out the details using `pp`.
-# (Note: for this problem, just make the initialize method in the class, no other methods needed)
-class Shoe
-  def initialize(name, color, price)
-    @name = name
-    @color = color
-    @price = price
+# Fix the errors in the code below.
+class Person
+  attr_reader :name, :height
+  def initialize(name, height)
+    @name= name
+    @height = height
   end
 end
-  shoe= Shoe.new("yeezy", "black", 520)
 
-  pp shoe
+person = Person.new("Rob", 80)
+pp person
+pp person.name
+pp person.height
