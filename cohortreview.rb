@@ -177,44 +177,81 @@
 # fruits[:pears] = 4
 # pp fruits
 
-# QUESTION 1
-# Write a line of code to print out the name for drink1. 
-# Then write a line of code to print out the ingredients for drink1 (on a single line). 
-# Then write a line of code to print out only the first ingredient for drink1. 
-# The final output should be: "Seltzer", then ["water", "bubbles"], then "water"
-drink1 = {"name" => "Seltzer", "ingredients" => ["water", "bubbles"]}
-drink2 = {"name" => "Coca Cola", "ingredients" => ["water", "bubbles", "sugar", "brown food coloring"]}
-drink3 = {"name" => "water", "ingredients" => ["hydrogen", "oxygen"]}
+# # QUESTION 1
+# # Write a line of code to print out the name for drink1. 
+# # Then write a line of code to print out the ingredients for drink1 (on a single line). 
+# # Then write a line of code to print out only the first ingredient for drink1. 
+# # The final output should be: "Seltzer", then ["water", "bubbles"], then "water"
+# drink1 = {"name" => "Seltzer", "ingredients" => ["water", "bubbles"]}
+# drink2 = {"name" => "Coca Cola", "ingredients" => ["water", "bubbles", "sugar", "brown food coloring"]}
+# drink3 = {"name" => "water", "ingredients" => ["hydrogen", "oxygen"]}
 
-pp drink1["name"]
-pp drink1["ingredients"]
-pp drink1["ingredients"][0]
+# pp drink1["name"]
+# pp drink1["ingredients"]
+# pp drink1["ingredients"][0]
+
+
+# # QUESTION 2
+# # Start with the array of hashes below.
+# # Write a loop to print out each person's hobby using a pp statement, each on separate lines.
+# people = [
+#   {
+#     "first_name" => "Robert",
+#     "last_name" => "Garcia", 
+#     "hobbies" => ["basketball", "chess", "phone tag"]
+#    },
+#    {
+#     "first_name" => "Molly",
+#     "last_name" => "Barker",
+#     "hobbies" => ["programming", "reading", "jogging"]
+#    },
+#    {
+#     "first_name" => "Kelly",
+#     "last_name" => "Miller",
+#     "hobbies" => ["cricket", "baking", "stamp collecting"]
+#    }
+# ]
+
+# index = 0
+
+# while index < people.length
+#   pp people[index]["hobbies"]
+#    index = index + 1
+# end
+
+# QUESTION 1
+# Write a method that takes in four numbers and returns the numbers added together.
+# Then run the method and print the result. 
+# (Note: you do not need to make a custom class for this exercise, just a method)
+
+class Numbers
+  def initialize(first_number, second_number, third_number, fourth_number)
+    @first_number = first_number
+    @second_number = second_number
+    @third_number = third_number
+    @fourth_number = fourth_number
+  end
+  def sum 
+    puts @first_number + @second_number + @third_number + @fourth_number
+  end
+end
+  
+numbers= Numbers.new(1, 2, 3, 4)
+
+numbers.sum
 
 
 # QUESTION 2
-# Start with the array of hashes below.
-# Write a loop to print out each person's hobby using a pp statement, each on separate lines.
-people = [
-  {
-    "first_name" => "Robert",
-    "last_name" => "Garcia", 
-    "hobbies" => ["basketball", "chess", "phone tag"]
-   },
-   {
-    "first_name" => "Molly",
-    "last_name" => "Barker",
-    "hobbies" => ["programming", "reading", "jogging"]
-   },
-   {
-    "first_name" => "Kelly",
-    "last_name" => "Miller",
-    "hobbies" => ["cricket", "baking", "stamp collecting"]
-   }
-]
-
-index = 0
-
-while index < people.length
-  pp people[index]["hobbies"]
-   index = index + 1
+# Write a class called Shoe that stores attributes for name, color, and price.
+# Then make an instance of a shoe and print out the details using `pp`.
+# (Note: for this problem, just make the initialize method in the class, no other methods needed)
+class Shoe
+  def initialize(name, color, price)
+    @name = name
+    @color = color
+    @price = price
+  end
 end
+  shoe= Shoe.new("yeezy", "black", 520)
+
+  pp shoe
