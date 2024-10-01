@@ -144,19 +144,35 @@
 #   index = index + 1
 # end
 
-# QUESTION 1
-# Use a variable to store an array with three different words.
-# Then add one more word to the array and print the array on one line.
+# # QUESTION 1
+# # Use a variable to store an array with three different words.
+# # Then add one more word to the array and print the array on one line.
 
-bumble = ["a", "waste", "of"]
-bumble.push("time")
-pp bumble 
+# bumble = ["a", "waste", "of"]
+# bumble.push("time")
+# pp bumble 
+
+
+# # QUESTION 2
+# # Use a variable to store a hash with two different words and their definitions.
+# # Then add one more word with its definition and print the hash on one line.
+
+# Spock = {"vulcan" => "yes", "human" => "also yes"}
+# Spock["badass"] = "si"
+# pp Spock 
+
+# QUESTION 1
+# Convert all three lines of the following code
+# to use symbols instead of strings for the hash keys.
+product = {name: "Jacket", price: 49.99, color: "red"}
+puts product[:name] # the output is Jacket
+puts product[:price] # the output is 49.99
 
 
 # QUESTION 2
-# Use a variable to store a hash with two different words and their definitions.
-# Then add one more word with its definition and print the hash on one line.
-
-Spock = {"vulcan" => "yes", "human" => "also yes"}
-Spock["badass"] = "si"
-pp Spock 
+# The following code is supposed to add a new item to an existing hash,
+# but it has mistakes that cause the code to crash.
+# Find and fix the errors with the code.
+fruits = { coconut: 1, apple: 2, banana: 3 }
+fruits[:pears] = 4
+pp fruits
