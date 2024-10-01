@@ -161,18 +161,60 @@
 # Spock["badass"] = "si"
 # pp Spock 
 
+# # QUESTION 1
+# # Convert all three lines of the following code
+# # to use symbols instead of strings for the hash keys.
+# product = {name: "Jacket", price: 49.99, color: "red"}
+# puts product[:name] # the output is Jacket
+# puts product[:price] # the output is 49.99
+
+
+# # QUESTION 2
+# # The following code is supposed to add a new item to an existing hash,
+# # but it has mistakes that cause the code to crash.
+# # Find and fix the errors with the code.
+# fruits = { coconut: 1, apple: 2, banana: 3 }
+# fruits[:pears] = 4
+# pp fruits
+
 # QUESTION 1
-# Convert all three lines of the following code
-# to use symbols instead of strings for the hash keys.
-product = {name: "Jacket", price: 49.99, color: "red"}
-puts product[:name] # the output is Jacket
-puts product[:price] # the output is 49.99
+# Write a line of code to print out the name for drink1. 
+# Then write a line of code to print out the ingredients for drink1 (on a single line). 
+# Then write a line of code to print out only the first ingredient for drink1. 
+# The final output should be: "Seltzer", then ["water", "bubbles"], then "water"
+drink1 = {"name" => "Seltzer", "ingredients" => ["water", "bubbles"]}
+drink2 = {"name" => "Coca Cola", "ingredients" => ["water", "bubbles", "sugar", "brown food coloring"]}
+drink3 = {"name" => "water", "ingredients" => ["hydrogen", "oxygen"]}
+
+pp drink1["name"]
+pp drink1["ingredients"]
+pp drink1["ingredients"][0]
 
 
 # QUESTION 2
-# The following code is supposed to add a new item to an existing hash,
-# but it has mistakes that cause the code to crash.
-# Find and fix the errors with the code.
-fruits = { coconut: 1, apple: 2, banana: 3 }
-fruits[:pears] = 4
-pp fruits
+# Start with the array of hashes below.
+# Write a loop to print out each person's hobby using a pp statement, each on separate lines.
+people = [
+  {
+    "first_name" => "Robert",
+    "last_name" => "Garcia", 
+    "hobbies" => ["basketball", "chess", "phone tag"]
+   },
+   {
+    "first_name" => "Molly",
+    "last_name" => "Barker",
+    "hobbies" => ["programming", "reading", "jogging"]
+   },
+   {
+    "first_name" => "Kelly",
+    "last_name" => "Miller",
+    "hobbies" => ["cricket", "baking", "stamp collecting"]
+   }
+]
+
+index = 0
+
+while index < people.length
+  pp people[index]["hobbies"]
+   index = index + 1
+end
