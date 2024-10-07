@@ -415,25 +415,37 @@
 
 # puts pig_latin_word
 
+# # QUESTION 1
+# # Use a loop to create a new array of strings from each hash's :name key.
+# dogs = [
+#   { name: "Toto", breed: "Cairn Terrier" },
+#   { name: "Snoopy", breed: "Beagle" },
+#   { name: "Beethoven", breed: "Saint Bernard" }
+# ]
+
+# index1 = 0
+
+# # pp dogs[0][:name]
+# dog_names = []
+# dog_names << dogs[0][:name] + " " + dogs[1][:name] + " " + dogs[2][:name]
+# list = []
+
+
+
+# while index1 < dog_names.length
+#   list << dog_names[index1]
+#   index1 = index1 = 1
+# end
+# pp list
+
 # QUESTION 1
-# Use a loop to create a new array of strings from each hash's :name key.
-dogs = [
-  { name: "Toto", breed: "Cairn Terrier" },
-  { name: "Snoopy", breed: "Beagle" },
-  { name: "Beethoven", breed: "Saint Bernard" }
-]
+# Create a program that multiplies by 2 until 100,000. 
+# That is, the program should print out: 1, 2, 4, 8, 16, 32, etc.
+#  until you get above 100,000.
+#  
+number = 1
 
-index1 = 0
-
-# pp dogs[0][:name]
-dog_names = []
-dog_names << dogs[0][:name] + " " + dogs[1][:name] + " " + dogs[2][:name]
-list = []
-
-
-
-while index1 < dog_names.length
-  list << dog_names[index1]
-  index1 = index1 = 1
+while number <= 100000
+  number = number * 2
+  puts number
 end
-pp list
