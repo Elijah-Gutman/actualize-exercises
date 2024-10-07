@@ -408,11 +408,32 @@
 # Write a program that asks the user to enter a single word 
 # and prints out the Pig Latin version of that word.
 
-puts "type out a word and have it become IPAG ATINLAY"
-word= gets.chomp
+# puts "type out a word and have it become IPAG ATINLAY"
+# word= gets.chomp
 
-pig_latin_word = word[1..9] + word[0] + "ay"
+# pig_latin_word = word[1..-1] + word[0] + "ay"
 
-puts pig_latin_word
+# puts pig_latin_word
+
+# QUESTION 1
+# Use a loop to create a new array of strings from each hash's :name key.
+dogs = [
+  { name: "Toto", breed: "Cairn Terrier" },
+  { name: "Snoopy", breed: "Beagle" },
+  { name: "Beethoven", breed: "Saint Bernard" }
+]
+
+index1 = 0
+
+# pp dogs[0][:name]
+dog_names = []
+dog_names << dogs[0][:name] + " " + dogs[1][:name] + " " + dogs[2][:name]
+list = []
 
 
+
+while index1 < dog_names.length
+  list << dog_names[index1]
+  index1 = index1 = 1
+end
+pp list
