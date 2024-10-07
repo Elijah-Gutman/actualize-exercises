@@ -83,19 +83,29 @@ numbers = [4, 6, 1, 4, 2, 8, 3, 4, 1, 7]
 
 # puts result.inspect
 
-def remove_duplicates(numbers)
-    unique_numbers = {}
-    unique_elements = []
+# def remove_duplicates(numbers)
+#     unique_numbers = {}
+#     unique_elements = []
   
-    numbers.each do |element|
-      unless unique_numbers[element]
-        unique_numbers[element] = true
-        unique_elements << element
-      end
-    end
+#     numbers.each do |element|
+#       unless unique_numbers[element]
+#         unique_numbers[element] = true
+#         unique_elements << element
+#       end
+#     end
   
-    unique_elements  # Return the array of unique elements
-end
+#     unique_elements  # Return the array of unique elements
+# end
   
-  result = remove_duplicates(numbers)
-  puts result.inspect
+#   result = remove_duplicates(numbers)
+#   results = result.inspect
+
+#   pp results
+
+# QUESTION 1
+# Use a loop to compute the sum of all the given numbers.
+numbers = [5, 4, 2, 2, 6, 8, 1]
+
+sum_total = numbers.sum
+
+pp sum_total

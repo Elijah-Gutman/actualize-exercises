@@ -461,20 +461,29 @@
 # That is, the second array should look like: [4, 6, 1, 2, 8, 3, 7]
 # The one catch: Don't use the "uniq" method available to arrays! 
 # (That would do this for you.)
-numbers = [4, 6, 1, 4, 2, 8, 3, 4, 1, 7]
-def remove_duplicates(numbers)
-  unique_numbers = {}
-  unique_elements = []
+# numbers = [4, 6, 1, 4, 2, 8, 3, 4, 1, 7]
+# def remove_duplicates(numbers)
+#   unique_numbers = {}
+#   unique_elements = []
 
-  numbers.each do |element|
-    unless unique_numbers[element]
-      unique_numbers[element] = true
-      unique_elements << element
-    end
-  end
+#   numbers.each do |element|
+#     unless unique_numbers[element]
+#       unique_numbers[element] = true
+#       unique_elements << element
+#     end
+#   end
 
-  unique_elements 
-end
+#   unique_elements 
+# end
 
-result = remove_duplicates(numbers)
-puts result.inspect
+# result = remove_duplicates(numbers)
+# puts result.inspect
+
+
+# QUESTION 1
+# Use a loop to compute the sum of all the given numbers.
+numbers = [5, 4, 2, 2, 6, 8, 1]
+
+sum_total = numbers.sum
+
+pp sum_total
