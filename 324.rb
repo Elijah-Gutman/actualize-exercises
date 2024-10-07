@@ -95,7 +95,7 @@ def remove_duplicates(numbers)
     end
   
     unique_elements  # Return the array of unique elements
-  end
+end
   
   result = remove_duplicates(numbers)
   puts result.inspect
