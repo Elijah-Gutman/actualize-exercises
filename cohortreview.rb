@@ -365,14 +365,31 @@
 # Use a loop to print out only the numbers greater than 10.
 
 
-numbers_array = [4, 53, 22, 3, 9, 7, 12]
-index = 0
+# numbers_array = [4, 53, 22, 3, 9, 7, 12]
+# index = 0
 
-while index < numbers_array.length
-    if numbers_array[index] >= 10
-        pp numbers_array[index]
-    end
-    index = index + 1
+# while index < numbers_array.length
+#     if numbers_array[index] >= 10
+#         pp numbers_array[index]
+#     end
+#     index = index + 1
+# end
+
+# QUESTION 1
+# Create a fortune teller which tells the user a fortune based on the user's
+#  favorite number. 
+# Give at least 3 possible outcomes. So along these lines, for example: 
+# If the user's favorite number is below 50, give fortune X. 
+# If the user's favorite number is between 50 and 100, give fortune Y. 
+# If the user's favorite number is above 100, give fortune Z.
+
+puts "whats is your favorite number?"
+number = gets.chomp.to_i
+
+if number < 50
+  puts "You don't tyhink highly of yourself"
+elsif number > 50 && number < 100
+    puts "Of average intellect"
+else
+  puts " you think big!"
 end
-
-
