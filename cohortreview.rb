@@ -500,10 +500,36 @@
 # Note: If you run the code p 9 / 2, it prints 4 even though the result should be 4.5. 
 # This is because when dividing integers in Ruby, the result will be an integer.
 # 
-numbers = []
-5.times do
-    puts "enter a number"
-    numbers.push(gets.chomp.to_i)
-end 
-total = numbers.sum / numbers.length
-pp total
+# numbers = []
+# 5.times do
+#     puts "enter a number"
+#     numbers.push(gets.chomp.to_i)
+# end 
+# total = numbers.sum / numbers.length
+# pp total
+# 
+
+
+# Step 1: Read the problem below.
+# Step 2: Decompose the problem into smaller testable problems. DO NOT SOLVE THE PROBLEM YET.
+# Step 3: Solve each problem until you get stuck. YOU DO NOT NEED TO SOLVE THE COMPLETE PROBLEM!
+
+# QUESTION 1
+# Have the user enter 10 words, and allow for duplicate words. 
+# After the user is done, the program will tell the user 
+# which word was entered the most frequently.
+# For example, if the user enters: 
+#   apple, banana, orange, pear, apple, pear, apple, squash, apple, pear
+# The program will say: "apple was your most common word"
+# (That's because apple appeared in the user's list 4 times, more than any other word.)
+strings = []
+10.times do
+  puts "type our a list of groceries including duplicates"
+  strings.push(gets.chomp.to_s)
+
+end
+most_frequent_occurrence = strings.group_by { |item| item }
+                                  .max_by { |key, value| value.length }
+                                  .first
+
+puts most_frequent_occurrence + " " + "was your most common word"
