@@ -522,14 +522,37 @@
 #   apple, banana, orange, pear, apple, pear, apple, squash, apple, pear
 # The program will say: "apple was your most common word"
 # (That's because apple appeared in the user's list 4 times, more than any other word.)
-strings = []
-10.times do
-  puts "type our a list of groceries including duplicates"
-  strings.push(gets.chomp.to_s)
+# strings = []
+# 10.times do
+#   puts "type our a list of groceries including duplicates"
+#   strings.push(gets.chomp.to_s)
 
+# end
+# most_frequent_occurrence = strings.group_by { |item| item }
+#                                   .max_by { |key, value| value.length }
+#                                   .first
+
+# puts most_frequent_occurrence + " " + "was your most common word"
+# 
+
+# QUESTION 1
+# Use a loop to create a new array with only the strings with 6 or fewer letters.
+words = ["correct", "horse", "battery", "staple"]
+
+index = 0
+six_letter_words =[]
+
+while index < words.length
+  if words[index].length <= 6
+    six_letter_words << words[index]
+  end
+  index = index + 1
 end
-most_frequent_occurrence = strings.group_by { |item| item }
-                                  .max_by { |key, value| value.length }
-                                  .first
+p six_letter_words
 
-puts most_frequent_occurrence + " " + "was your most common word"
+
+
+
+# while index < words.length
+#   six_letter_words << words[index][5]
+# end
