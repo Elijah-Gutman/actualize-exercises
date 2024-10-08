@@ -543,16 +543,10 @@ index = 0
 six_letter_words =[]
 
 while index < words.length
-  if words[index].length <= 6
+  if words[index].length <= 5
     six_letter_words << words[index]
   end
   index = index + 1
 end
 p six_letter_words
 
-
-
-
-# while index < words.length
-#   six_letter_words << words[index][5]
-# end
