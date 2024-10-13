@@ -661,40 +661,53 @@
 # (You can see an example of all the rules here:
 #  https://byjus.com/maths/roman-numerals/#chart)
 #  
-def roman_to_int(s)
-  special_matches = s.scan(/IV|IX|XL|XC|CD|CM/)
-  if special_matches
-    special_sum = special_matches.map { |m| special_numerals[m]}.sum
-    special_matches.each { |m| s.gsub!(m, '') }
-  end
-  normal_sum = s.each_char.map { |c| numerals[c] }.sum  
-  return (special_sum + normal_sum) if special_sum
+# def roman_to_int(s)
+#   special_matches = s.scan(/IV|IX|XL|XC|CD|CM/)
+#   if special_matches
+#     special_sum = special_matches.map { |m| special_numerals[m]}.sum
+#     special_matches.each { |m| s.gsub!(m, '') }
+#   end
+#   normal_sum = s.each_char.map { |c| numerals[c] }.sum  
+#   return (special_sum + normal_sum) if special_sum
   
-  normal_sum
+#   normal_sum
+# end
+
+# def numerals
+#   {
+#     'I' => 1,
+#     'V' => 5,
+#     'X' => 10,
+#     'L' => 50,
+#     'C' => 100,
+#     'D' => 500,
+#     'M' => 1000
+#   }
+# end
+
+# def special_numerals
+#   {
+#     'IV' => 4,
+#     'IX' => 9,
+#     'XL' => 40,
+#     'XC' => 90,
+#     'CD' => 400,
+#     'CM' => 900
+#   }
+# end
+
+# pp roman_to_int("MCMXCIV")
+
+# QUESTION 1
+# Use a loop to create a new array with each string's first letter only.
+words = ["Big", "Elephants", "Can", "Always", "Understand", "Small", "Elephants"]
+
+pp words[0][0]
+
+index1 = 0
+new_array = []
+while index1 < words.length
+  new_array << words[index1][0] 
+  index1 = index1 + 1
 end
-
-def numerals
-  {
-    'I' => 1,
-    'V' => 5,
-    'X' => 10,
-    'L' => 50,
-    'C' => 100,
-    'D' => 500,
-    'M' => 1000
-  }
-end
-
-def special_numerals
-  {
-    'IV' => 4,
-    'IX' => 9,
-    'XL' => 40,
-    'XC' => 90,
-    'CD' => 400,
-    'CM' => 900
-  }
-end
-
-pp roman_to_int("MCMXCIV")
-
+pp new_array
