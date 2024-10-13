@@ -700,14 +700,33 @@
 
 # QUESTION 1
 # Use a loop to create a new array with each string's first letter only.
-words = ["Big", "Elephants", "Can", "Always", "Understand", "Small", "Elephants"]
+# words = ["Big", "Elephants", "Can", "Always", "Understand", "Small", "Elephants"]
 
-pp words[0][0]
+# pp words[0][0]
 
-index1 = 0
-new_array = []
-while index1 < words.length
-  new_array << words[index1][0] 
-  index1 = index1 + 1
+# index1 = 0
+# new_array = []
+# while index1 < words.length
+#   new_array << words[index1][0] 
+#   index1 = index1 + 1
+# end
+# pp new_array
+# QUESTION 1
+# Start your program with the line of code below.
+# The rest of your program should print out the second letter from each inner array. 
+# (The result in your terminal should be the letters b, d, f, h, j on separate lines)
+letters = [["a", "b"], ["c", "d"], ["e", "f"], ["g", "h"], ["i", "j"]]
+
+pp letters[0][1]
+
+index1 = 1 
+
+shorter_letters = []
+
+while index1 < letters.length
+  shorter_letters << letters[index1][1]
+  index1= index1 + 1
+
+  
 end
-pp new_array
+pp shorter_letters
