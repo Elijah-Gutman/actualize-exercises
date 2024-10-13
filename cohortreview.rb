@@ -664,8 +664,8 @@
 # def roman_to_int(s)
 #   special_matches = s.scan(/IV|IX|XL|XC|CD|CM/)
 #   if special_matches
-#     special_sum = special_matches.map { |m| special_numerals[m]}.sum
-#     special_matches.each { |m| s.gsub!(m, '') }
+#     special_matches.each { |q| s.gsub!(q, '') }
+#     special_sum = special_matches.map { |q| special_numerals[q]}.sum
 #   end
 #   normal_sum = s.each_char.map { |c| numerals[c] }.sum  
 #   return (special_sum + normal_sum) if special_sum
@@ -696,7 +696,7 @@
 #   }
 # end
 
-# pp roman_to_int("MCMXCIV")
+# p roman_to_int("MCMXCIV")
 
 # QUESTION 1
 # Use a loop to create a new array with each string's first letter only.
@@ -715,18 +715,64 @@
 # Start your program with the line of code below.
 # The rest of your program should print out the second letter from each inner array. 
 # (The result in your terminal should be the letters b, d, f, h, j on separate lines)
-letters = [["a", "b"], ["c", "d"], ["e", "f"], ["g", "h"], ["i", "j"]]
+# letters = [["a", "b"], ["c", "d"], ["e", "f"], ["g", "h"], ["i", "j"]]
 
-pp letters[0][1]
+# pp letters[0][1]
 
-index1 = 1 
+# index1 = 1 
 
-shorter_letters = []
+# shorter_letters = []
 
-while index1 < letters.length
-  shorter_letters << letters[index1][1]
-  index1= index1 + 1
+# while index1 < letters.length
+#   shorter_letters << letters[index1][1]
+#   index1= index1 + 1
 
   
+# end
+# pp shorter_letters
+# 
+# Step 1: Read the problem below.
+# Step 2: Decompose the problem into smaller testable problems. DO NOT SOLVE THE PROBLEM YET.
+# Step 3: Solve each problem until you get stuck. YOU DO NOT NEED TO SOLVE THE COMPLETE PROBLEM!
+
+# QUESTION 1
+# Ruby has a .sort method that makes it easy to sort an array. 
+# The goal of this exercise is to implement your own sort from scratch 
+# (without using Ruby's #sort method!)
+
+# The approach you will implement is called bubble sort. 
+# First you examine the first two items in the array. 
+# If the second is smaller than the first, you swap their positions. 
+# Then you move on to the next two items and keep repeating. 
+# You can see a visual of it in action here: https://upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif 
+
+# Your job is to implement a bubble sort that takes an array and returns a sorted array. 
+# To be clear, you're not allowed to use the built in .sort method.
+# Instead you'll write code to go through the array two items at a time 
+# to accomplish the same thing.
+# 
+bubble_array = [ 2, 4, 3, 5, 6]
+
+index = 0
+pp bubble_array[index]
+# pp bubble_array[index + 1]
+while index < bubble_array.length
+  pp bubble_array[index + 1]
+  pp bubble_array
+  
+  if bubble_array[index] < bubble_array[index + 1]
+    temp = bubble_array[index + 1]
+    bubble_array[index + 1] = bubble_array[index]
+    bubble_array[index] = temp
+  end
+  index = index + 1
 end
-pp shorter_letters
+
+
+# while index < bubble_array.length
+#   if bubble_array[index] < bubble_array[index + 1]
+#     bubble_array[index+ 1] = bubble_array[index]
+#   end
+#   index = index + 1
+# end
+
