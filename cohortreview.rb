@@ -555,27 +555,146 @@
 # Then print out the amount of points the word is worth in the game of Scrabble.
 # You can start with the hash below to determine how many points each letter is worth.
 # (As an example, the word "bad" is worth 3 + 1 + 2 = 6 points.)
-letter_points = {'a'=> 1, 'b'=> 3, 'c'=> 3, 'd'=> 2, 'e'=> 1, 'f'=> 4, 
-'g'=> 2, 'h'=> 4, 'i'=> 1, 'j'=> 8, 'k'=> 5, 'l'=> 1, 'm'=> 3,
- 'n'=> 1, 'o'=> 1, 'p'=> 3, 'q'=> 10, 'r'=> 1, 's'=> 1, 't'=> 1,
-  'u'=> 1, 'v'=> 4, 'w'=> 4, 'x'=> 8, 
-'y'=> 4, 'z'=> 10}
-puts " type out a word... dummy"
-user_input = gets.chomp.downcase
+# letter_points = {'a'=> 1, 'b'=> 3, 'c'=> 3, 'd'=> 2, 'e'=> 1, 'f'=> 4, 
+# 'g'=> 2, 'h'=> 4, 'i'=> 1, 'j'=> 8, 'k'=> 5, 'l'=> 1, 'm'=> 3,
+#  'n'=> 1, 'o'=> 1, 'p'=> 3, 'q'=> 10, 'r'=> 1, 's'=> 1, 't'=> 1,
+#   'u'=> 1, 'v'=> 4, 'w'=> 4, 'x'=> 8, 
+# 'y'=> 4, 'z'=> 10}
+# puts " type out a word... dummy"
+# user_input = gets.chomp.downcase
 
-letters = user_input.split(//)
+# letters = user_input.split(//)
 
-scrabble_points = []
-index = 0
-while index < letters.length
-  letter = letters[index]
-  scrabble_points.push(letter_points[letter])
-  index = index + 1
-end
-pp scrabble_points
-pp scrabble_points.sum
+# scrabble_points = []
+# index = 0
+# while index < letters.length
+#   letter = letters[index]
+#   scrabble_points.push(letter_points[letter])
+#   index = index + 1
+# end
+# pp scrabble_points
+# pp scrabble_points.sum
 
 # while index < user_input.length
 #   pp letter_points[letters]
 #   index = index + 1
 # end
+
+
+# Step 1: Read the problem below.
+# Step 2: Decompose the problem into smaller testable problems. 
+# DO NOT SOLVE THE PROBLEM YET.
+# Step 3: Solve each problem until you get stuck. 
+# YOU DO NOT NEED TO SOLVE THE COMPLETE PROBLEM!
+
+# QUESTION 1
+# Given an integer, write a method to return its roman numeral representation.
+# (1 is I, 2 is II, 3 is III, 4 is IV, 5 is V, 6 is VI, 7 is VII, etc.)
+# (You can see an example of all the rules here:
+#  https://byjus.com/maths/roman-numerals/#chart)
+#  
+#
+# def integer_values
+#   {"h" => 1,
+# "e" => 2,
+# "l" => 3,
+# "o" =>4}
+# end
+# str = ("hello")
+# str_array = []
+# str_array << str.each_char.map do |char|
+#   char
+# end
+# pp str_array
+
+# pp str_array[0].map { |a| integer_values[a]}
+
+# iterated_version_of_array = str_array[0].map { |a| integer_values[a]}.sum
+
+# pp str_array[0][0].scan(/h|e|l|o/)
+# str_shorter_array = str_array[0][0].scan(/h|e|l|o/)
+# pp iterated_version_of_array
+# pp str_array[0][0].scan(/h|l|o/)
+# str_shorter_array = str_array[0][0].scan(/h|e|l|o/)
+# index = 0
+# looped_array = []
+# while index < str_array[0].length
+#   looped_array << str_array[0][index].scan(/h|e|l|o/)
+#   index = index + 1
+# end
+# pp looped_array
+# check_for_str = looped_array[0].join(" ")
+# pp check_for_str
+
+# index1 = 0
+# less_complex_array= []
+# while index1 < looped_array.length
+#   less_complex_array << looped_array[index1].join(" ")
+#   index1 = index1 + 1
+  
+# end
+
+# pp less_complex_array
+# pp less_complex_array.map { |a| integer_values[a]}
+# end
+# 
+#
+# Data structure issue, Cannot "loop through a string"
+# index = 0
+# scanned_version_of_array = []
+# pp str_array[0][index].scan(/h|l|o/)
+# while index < str_array[0][index].scan(/h|l|o/).length
+#   scanned_version_of_array << str_array[0][index]
+#   index = index + 1
+# end
+# pp  scanned_version_of_array
+
+#  not that anyone would read this but me but.... All of the above commented out
+#  code is to do with all the specific methods to do with the below roman numeral
+#  deciphering program. I just wanted to make sure I could logic my way through 
+#  all of the syntax having to do with the Below code before writing said code
+#  from the interwebs 
+#  The below code answers the below questions 
+# QUESTION 1
+# Given an integer, write a method to return its roman numeral representation.
+# (1 is I, 2 is II, 3 is III, 4 is IV, 5 is V, 6 is VI, 7 is VII, etc.)
+# (You can see an example of all the rules here:
+#  https://byjus.com/maths/roman-numerals/#chart)
+#  
+def roman_to_int(s)
+  special_matches = s.scan(/IV|IX|XL|XC|CD|CM/)
+  if special_matches
+    special_sum = special_matches.map { |m| special_numerals[m]}.sum
+    special_matches.each { |m| s.gsub!(m, '') }
+  end
+  normal_sum = s.each_char.map { |c| numerals[c] }.sum  
+  return (special_sum + normal_sum) if special_sum
+  
+  normal_sum
+end
+
+def numerals
+  {
+    'I' => 1,
+    'V' => 5,
+    'X' => 10,
+    'L' => 50,
+    'C' => 100,
+    'D' => 500,
+    'M' => 1000
+  }
+end
+
+def special_numerals
+  {
+    'IV' => 4,
+    'IX' => 9,
+    'XL' => 40,
+    'XC' => 90,
+    'CD' => 400,
+    'CM' => 900
+  }
+end
+
+pp roman_to_int("MCMXCIV")
+
