@@ -861,6 +861,7 @@
 
 array = [1, 2, 3]
 
-pp array.map { |m| m * 100 }
+array_1 = array.map { |m| m * 100 }
+pp array_1
 
 # ["A", "B", "C"]
