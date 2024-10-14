@@ -825,11 +825,34 @@
 # Write a method that takes in a string and a number n 
 # and returns the string repeated n times.
 # Then run the method and print the result.
-def multiplier(word)
-  word * 3
+# def multiplier(word)
+#   word * 3
   
+# end
+# stringers= multiplier("hello")
+# pp stringers
+# 
+# QUESTION 1
+# The following code uses the faker Ruby library.
+# First read the library documentation: https://github.com/faker-ruby/faker 
+# Then write comments next to each line explaining what you think the code is doing.
+ require 'faker'                              # loading the dependancies of the installed gem
+
+fake_data = []                               #  creating an array named fake_data
+100.times do                                 # do the following 100 times
+  name = Faker::Name.name                    # set name to produce a fake name
+  email = Faker::Internet.email(name: name)  # set email to produce a fake email following by the element name
+  fake_data << { name: name, email: email }  # append the values procuced above into the array fake_data
 end
-stringers= multiplier("hello")
-pp stringers
+
+fake_data.each do |item|                     # for each item in the array fake data do the following
+  puts "Fake Name: #{item[:name]}"           # print the value of the name 
+  puts "Fake Email: #{item[:email]}"
+  puts "---"
+end
+# require 'faker'
+
+# Faker::Config.random = Random.new(42)
+# pp Faker::Company.bs
 
 
