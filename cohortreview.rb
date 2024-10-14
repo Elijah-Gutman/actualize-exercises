@@ -792,26 +792,32 @@
 # The following code uses the geocoder Ruby library.
 # First read the library documentation: https://github.com/alexreisner/geocoder 
 # Then write comments next to each line explaining what you think the code is doing.
-require "geocoder"                                   # loading the gemfile where the
-                                                     # dependancies sit
+# require "geocoder"                                   # loading the gemfile where the
+#                                                      # dependancies sit
 
-addresses = [                                        # imputing an array of adressess
-  "1600 Amphitheatre Parkway, Mountain View, CA",
-  "1 Infinite Loop, Cupertino, CA",
-  "350 5th Ave, New York, NY",
-]
+# addresses = [                                        # imputing an array of adressess
+#   "1600 Amphitheatre Parkway, Mountain View, CA",
+#   "1 Infinite Loop, Cupertino, CA",
+#   "350 5th Ave, New York, NY",
+# ]
 
-addresses.each do |address|                          #  in the following loop for each adress search the array "adress" an do
-  result = Geocoder.search(address).first            #  search for first element in the array address
-  if result                                          #  if the result is then..
-    latitude = result.latitude                       #  setting the value latitude to equal the value of the latitude extracted from result
-    longitude = result.longitude                     # setting the value longtitude to equal the value of the longtitude extracted from result
+# addresses.each do |address|                          #  in the following loop for each adress search the array "adress" an do
+#   result = Geocoder.search(address).first            #  search for first element in the array address
+#   if result                                          #  if the result is then..
+#     latitude = result.latitude                       #  setting the value latitude to equal the value of the latitude extracted from result
+#     longitude = result.longitude                     # setting the value longtitude to equal the value of the longtitude extracted from result
     
-    puts "Address: #{address}"                       # prints address + adress in a string
-    puts "Latitude: #{latitude}"
-    puts "Longitude: #{longitude}"
-    puts "---"
-  else
-    puts "Unable to geocode address: #{address}"     #  if the system was unable to locate the adress say as such
-  end
-end
+#     puts "Address: #{address}"                       # prints address + adress in a string
+#     puts "Latitude: #{latitude}"
+#     puts "Longitude: #{longitude}"
+#     puts "---"
+#   else
+#     puts "Unable to geocode address: #{address}"     #  if the system was unable to locate the adress say as such
+#   end
+# end
+# 
+# QUESTION 1
+# Read about the Ruby File class: https://rubyapi.org/3.2/o/s?q=file
+# Then write a program that creates a file called example.txt with the 
+# sentence "This is an example!" in it.
+File.write('example1.txt',"this is an example")
