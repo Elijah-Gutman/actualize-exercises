@@ -751,26 +751,26 @@
 # Instead you'll write code to go through the array two items at a time 
 # to accomplish the same thing.
 # 
-bubble_array = [2, 4, 3, 5, 6]
-# [2, 3, 4, 5, 6]
+# bubble_array = [2, 4, 3, 5, 6]
+# # [2, 3, 4, 5, 6]
 
-index = 0
-arr = bubble_array
+# index = 0
+# arr = bubble_array
 
-while index < arr.length - 1 
+# while index < arr.length - 1 
 
  
-  if arr[index] > arr[index + 1]
+#   if arr[index] > arr[index + 1]
     
-    temp = arr[index]
-    arr[index] = arr[index + 1]
-    arr[index + 1] = temp
-  end
+#     temp = arr[index]
+#     arr[index] = arr[index + 1]
+#     arr[index + 1] = temp
+#   end
 
-  index += 1
-end
+#   index += 1
+# end
 
-puts "Sorted array: #{arr}"
+# puts "Sorted array: #{arr}"
 
 
 
@@ -781,3 +781,9 @@ puts "Sorted array: #{arr}"
 #   index = index + 1
 # end
 
+# QUESTION 1
+# Write a method that takes in an array of numbers and returns its sum.
+# Then run the method and print the result.
+# 
+numbers= [1, 2, 3, 4, 5]
+pp numbers.sum
