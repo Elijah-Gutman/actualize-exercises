@@ -820,4 +820,16 @@
 # Read about the Ruby File class: https://rubyapi.org/3.2/o/s?q=file
 # Then write a program that creates a file called example.txt with the 
 # sentence "This is an example!" in it.
-File.write('example1.txt',"this is an example")
+# File.write('example1.txt',"this is an example")
+# QUESTION 1
+# Write a method that takes in a string and a number n 
+# and returns the string repeated n times.
+# Then run the method and print the result.
+def multiplier(word)
+  word * 3
+  
+end
+stringers= multiplier("hello")
+pp stringers
+
+
