@@ -751,22 +751,27 @@
 # Instead you'll write code to go through the array two items at a time 
 # to accomplish the same thing.
 # 
-bubble_array = [ 2, 4, 3, 5, 6]
+bubble_array = [2, 4, 3, 5, 6]
+# [2, 3, 4, 5, 6]
 
 index = 0
-pp bubble_array[index]
-# pp bubble_array[index + 1]
-while index < bubble_array.length
-  pp bubble_array[index + 1]
-  pp bubble_array
-  
-  if bubble_array[index] < bubble_array[index + 1]
-    temp = bubble_array[index + 1]
-    bubble_array[index + 1] = bubble_array[index]
-    bubble_array[index] = temp
+arr = bubble_array
+
+while index < arr.length - 1 
+
+ 
+  if arr[index] > arr[index + 1]
+    
+    temp = arr[index]
+    arr[index] = arr[index + 1]
+    arr[index + 1] = temp
   end
-  index = index + 1
+
+  index += 1
 end
+
+puts "Sorted array: #{arr}"
+
 
 
 # while index < bubble_array.length
