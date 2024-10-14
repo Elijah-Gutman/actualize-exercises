@@ -859,9 +859,24 @@
 # Then write a program that uses the map method with an array of numbers 
 # to create a new array with each number multiplied by 100.
 
-array = [1, 2, 3]
+# array = [1, 2, 3]
 
-array_1 = array.map { |m| m * 100 }
-pp array_1
+# array_1 = array.map { |m| m * 100 }
+# pp array_1
 
-# ["A", "B", "C"]
+# QUESTION 1
+# Write a method that takes in an array of numbers and returns the mean average.
+# Then run the method and print the result.
+arr= [1, 2, 3, 4]
+def average(math1)
+  (math1).sum / (math1).size
+end
+
+pp average(arr)
+
+# arr = [0,4,8,2,5,0,2,6]
+#  def average(number)
+#    number.sum.fdiv(number.size)
+#  end
+
+# pp average(arr)
