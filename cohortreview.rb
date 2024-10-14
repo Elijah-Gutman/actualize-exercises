@@ -836,23 +836,31 @@
 # The following code uses the faker Ruby library.
 # First read the library documentation: https://github.com/faker-ruby/faker 
 # Then write comments next to each line explaining what you think the code is doing.
- require 'faker'                              # loading the dependancies of the installed gem
+#  require 'faker'                              # loading the dependancies of the installed gem
 
-fake_data = []                               #  creating an array named fake_data
-100.times do                                 # do the following 100 times
-  name = Faker::Name.name                    # set name to produce a fake name
-  email = Faker::Internet.email(name: name)  # set email to produce a fake email following by the element name
-  fake_data << { name: name, email: email }  # append the values procuced above into the array fake_data
-end
+# fake_data = []                               #  creating an array named fake_data
+# 100.times do                                 # do the following 100 times
+#   name = Faker::Name.name                    # set name to produce a fake name
+#   email = Faker::Internet.email(name: name)  # set email to produce a fake email following by the element name
+#   fake_data << { name: name, email: email }  # append the values procuced above into the array fake_data
+# end
 
-fake_data.each do |item|                     # for each item in the array fake data do the following
-  puts "Fake Name: #{item[:name]}"           # print the value of the name 
-  puts "Fake Email: #{item[:email]}"
-  puts "---"
-end
+# fake_data.each do |item|                     # for each item in the array fake data do the following
+#   puts "Fake Name: #{item[:name]}"           # print the value of the name 
+#   puts "Fake Email: #{item[:email]}"
+#   puts "---"
+# end
 # require 'faker'
 
 # Faker::Config.random = Random.new(42)
 # pp Faker::Company.bs
+# QUESTION 1
+# Read about the Ruby map method: https://www.rubyguides.com/2018/10/ruby-map-method/ 
+# Then write a program that uses the map method with an array of numbers 
+# to create a new array with each number multiplied by 100.
 
+array = [1, 2, 3]
 
+pp array.map { |m| m * 100 }
+
+# ["A", "B", "C"]
