@@ -928,15 +928,30 @@
 # QUESTION 1
 # Write a method that takes in an array of numbers and returns an array with every number doubled.
 # Then run the method and print the result.
-arr = [2, 4, 5, 10]
-def doubled(numbers)
-  numbers * 2
-end
+# arr = [2, 4, 5, 10]
+# def doubled(numbers)
+#   numbers * 2
+# end
 
-index = 0
-doubled_numbers= []
-while index < arr.size
-  doubled_numbers << doubled(arr)[index] * 2
-  index = index + 1
-end
-pp doubled_numbers
+# index = 0
+# doubled_numbers= []
+# while index < arr.size
+#   doubled_numbers << doubled(arr)[index] * 2
+#   index = index + 1
+# end
+# pp doubled_numbers
+# QUESTION 1
+# The following code uses the money Ruby library.
+# First read the library documentation: https://github.com/RubyMoney/money 
+# Then write comments next to each line explaining what you think the code is doing.
+require "money"                          # load the dependancy
+
+I18n.enforce_available_locales = false   # set the location as non important
+I18n.locale = :en                        # slects english for the markation and delimiter (readabillity of user)
+Money.default_currency = "USD"           #  sets the default currency to USD
+Money.add_rate("CAD", "USD", 0.8)        #  sets the exchanged rate from CAD to USD
+
+money1 = Money.new(1000)                 # sets the object money1 with the value of 1000 cents USD since USD is the default currency
+money2 = Money.new(500, "CAD")           # sets the object money2 with the value 500 canadian cents and exchanges them 
+result = money1 + money2                 #  adds the values together
+puts "Total: #{result}"                  #  prints the result (14.00 USD because of exchange rate referenced above )
