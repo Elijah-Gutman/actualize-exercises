@@ -962,9 +962,9 @@
 # to create a new array with only the strings that start with the letter "a".
 # 
 #
-fruits = %w(apple orange banana)
-fruits2 =  fruits.select { |fruit| fruit.start_with? "a" }
-pp fruits2
+# fruits = %w(apple orange banana)
+# fruits2 =  fruits.select { |fruit| fruit.start_with? "a" }
+# pp fruits2
 
 
 
@@ -981,3 +981,23 @@ pp fruits2
 
 # # {:apples=>10, :oranges=>5}
 # 
+# QUESTION 1
+# Write a method that takes in an array of strings and returns an array of the small strings
+# where the length of each string is 4 or fewer letters.
+# Then run the method and print the result.
+# 
+arr= ["bigger", "and", "smaller", "words", "Bros"]
+def shorten(word)
+  word
+end
+pp shorten(arr).find_all {|l| l.size <= 4}
+# OR
+pp shorten(arr).select { |n| n.size <= 4 }
+# index = 0
+# shorter_words=[]
+# while index < arr.size
+#  shorter_words << shorten(arr).find {|l| l.size <= 5}
+#  index = index + 1
+# end
+
+# pp shorter_words
