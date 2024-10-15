@@ -920,9 +920,23 @@
 # text = "A regular expression is a sequence of characters that define a search pattern."
 # matches = text.match(/character/)
 # p matches
-p "Regular expressions are aweful heres you answer... with brain pain"
-text= "Pg7USm29ln"
-numbers = text.scan(/\d/)
-pp numbers
-pp numbers.size
+# p "Regular expressions are aweful heres you answer... with brain pain"
+# text= "Pg7USm29ln"
+# numbers = text.scan(/\d/)
+# pp numbers
+# pp numbers.size
+# QUESTION 1
+# Write a method that takes in an array of numbers and returns an array with every number doubled.
+# Then run the method and print the result.
+arr = [2, 4, 5, 10]
+def doubled(numbers)
+  numbers * 2
+end
 
+index = 0
+doubled_numbers= []
+while index < arr.size
+  doubled_numbers << doubled(arr)[index] * 2
+  index = index + 1
+end
+pp doubled_numbers
