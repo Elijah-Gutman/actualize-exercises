@@ -867,12 +867,12 @@
 # QUESTION 1
 # Write a method that takes in an array of numbers and returns the mean average.
 # Then run the method and print the result.
-arr= [1, 2, 3, 4]
-def average(math1)
-  (math1).sum / (math1).size
-end
+# arr= [1, 2, 3, 4]
+# def average(math1)
+#   (math1).sum / (math1).size
+# end
 
-pp average(arr)
+# pp average(arr)
 
 # arr = [0,4,8,2,5,0,2,6]
 #  def average(number)
@@ -880,3 +880,31 @@ pp average(arr)
 #  end
 
 # pp average(arr)
+
+# QUESTION 1
+# The following code uses the csv Ruby library.
+# First read this tutorial on the library: https://www.rubyguides.com/2018/10/parse-csv-ruby/ 
+# Then write comments next to each line explaining what you think the code is doing.
+require 'csv'                                               # load the csv dependancy
+
+def write_csv(file_path, data)                              # creating a method to take in the inputs of file_path, and data
+  headers = data.first.keys                                 # setting the value of the headers to be the first key value inside of data array
+  CSV.open(                                                 #  creating a file name called filed path, with write mode on
+    file_path,                                              # above
+    'w',                                                    # above
+    write_headers: true,                                    #  if the element write_headers as a boolean is true
+    headers: headers                                        #  set the value of the element headers to headers as defined as data.first.keys
+  ) do |csv|                                                #  begins a block of code where the csv object will be used to write rows into the file
+    data.each do |row|                                      #  for each row inside the data array
+      csv << row.values                                     #  append the values accessed inside each row into the csv array
+    end
+  end
+end
+
+file_path = 'data.csv'                                      # set path to string 'data.csv'
+data = [                                                    #  data equals the listed array of hashes 
+  { name: 'John Doe', age: 30, city: 'New York' },
+  { name: 'Jane Smith', age: 25, city: 'San Francisco' },
+  { name: 'Bob Johnson', age: 35, city: 'Chicago' }
+]
+pp write_csv(file_path, data)                               # called the values of file_path and data to the function write_csv
