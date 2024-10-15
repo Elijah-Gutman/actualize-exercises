@@ -885,26 +885,44 @@
 # The following code uses the csv Ruby library.
 # First read this tutorial on the library: https://www.rubyguides.com/2018/10/parse-csv-ruby/ 
 # Then write comments next to each line explaining what you think the code is doing.
-require 'csv'                                               # load the csv dependancy
+# require 'csv'                                               # load the csv dependancy
 
-def write_csv(file_path, data)                              # creating a method to take in the inputs of file_path, and data
-  headers = data.first.keys                                 # setting the value of the headers to be the first key value inside of data array
-  CSV.open(                                                 #  creating a file name called filed path, with write mode on
-    file_path,                                              # above
-    'w',                                                    # above
-    write_headers: true,                                    #  if the element write_headers as a boolean is true
-    headers: headers                                        #  set the value of the element headers to headers as defined as data.first.keys
-  ) do |csv|                                                #  begins a block of code where the csv object will be used to write rows into the file
-    data.each do |row|                                      #  for each row inside the data array
-      csv << row.values                                     #  append the values accessed inside each row into the csv array
-    end
-  end
-end
+# def write_csv(file_path, data)                              # creating a method to take in the inputs of file_path, and data
+#   headers = data.first.keys                                 # setting the value of the headers to be the first key value inside of data array
+#   CSV.open(                                                 #  creating a file name called filed path, with write mode on
+#     file_path,                                              # above
+#     'w',                                                    # above
+#     write_headers: true,                                    #  if the element write_headers as a boolean is true
+#     headers: headers                                        #  set the value of the element headers to headers as defined as data.first.keys
+#   ) do |csv|                                                #  begins a block of code where the csv object will be used to write rows into the file
+#     data.each do |row|                                      #  for each row inside the data array
+#       csv << row.values                                     #  append the values accessed inside each row into the csv array
+#     end
+#   end
+# end
 
-file_path = 'data.csv'                                      # set path to string 'data.csv'
-data = [                                                    #  data equals the listed array of hashes 
-  { name: 'John Doe', age: 30, city: 'New York' },
-  { name: 'Jane Smith', age: 25, city: 'San Francisco' },
-  { name: 'Bob Johnson', age: 35, city: 'Chicago' }
-]
-pp write_csv(file_path, data)                               # called the values of file_path and data to the function write_csv
+# file_path = 'data.csv'                                      # set path to string 'data.csv'
+# data = [                                                    #  data equals the listed array of hashes 
+#   { name: 'John Doe', age: 30, city: 'New York' },
+#   { name: 'Jane Smith', age: 25, city: 'San Francisco' },
+#   { name: 'Bob Johnson', age: 35, city: 'Chicago' }
+# ]
+# pp write_csv(file_path, data)                               # called the values of file_path and data to the function write_csv
+
+# QUESTION 1
+# Read about regular expressions in Ruby:
+# http://ruby-for-beginners.rubymonstas.org/advanced/regular_expressions.html 
+# Then write a program that takes in a string and prints out 
+# the total number of numbers found in the string using regular expressions. 
+# For example, given the string "Pg7USm29ln", the program would print 3 since
+# there are 3 total numbers (7, 2, and 9) in the string.
+
+# text = "A regular expression is a sequence of characters that define a search pattern."
+# matches = text.match(/character/)
+# p matches
+p "Regular expressions are aweful heres you answer... with brain pain"
+text= "Pg7USm29ln"
+numbers = text.scan(/\d/)
+pp numbers
+pp numbers.size
+
