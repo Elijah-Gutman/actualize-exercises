@@ -1005,21 +1005,21 @@
 # The following code uses the sqlite3 Ruby library.
 # First read the library documentation: https://github.com/sparklemotion/sqlite3-ruby 
 # Then write comments next to each line explaining what you think the code is doing.
-require 'sqlite3'                                                                  # load sqlitw3 dpeendancies
+# require 'sqlite3'                                                                  # load sqlitw3 dpeendancies
 
-db = SQLite3::Database.open 'test.db'                                              # open up a database and name it 'test.db'
-db.results_as_hash = true                                                          # have results input into a hash
-db.execute "CREATE TABLE IF NOT EXISTS images(path TEXT, thumbs_up INT)"           # create a table that says "CREATE TABLE IF NOT EXISTS images(path TEXT, thumbs_up INT)"
+# db = SQLite3::Database.open 'test.db'                                              # open up a database and name it 'test.db'
+# db.results_as_hash = true                                                          # have results input into a hash
+# db.execute "CREATE TABLE IF NOT EXISTS images(path TEXT, thumbs_up INT)"           # create a table that says "CREATE TABLE IF NOT EXISTS images(path TEXT, thumbs_up INT)"
 
-image_path = 'image1.png'                                                          # create a path to a local image
-results = db.query "SELECT path, thumbs_up FROM images WHERE path=?", image_path   # set the results of variable to search the inside of the database for the local image
+# image_path = 'image1.png'                                                          # create a path to a local image
+# results = db.query "SELECT path, thumbs_up FROM images WHERE path=?", image_path   # set the results of variable to search the inside of the database for the local image
 
-first_result = results.next                                                        # oddly enough make the first result equal to the subsequent value of results
-if first_result                                                                    #  if first_result is true (search for first_result)
-  puts first_result['thumb_up']                                                    # add a thumbs up image to first result as placed in the database above
-else
-  puts 'No results found.'                                                         # if first result isn't found, print 'No results found.'
-end
+# first_result = results.next                                                        # oddly enough make the first result equal to the subsequent value of results
+# if first_result                                                                    #  if first_result is true (search for first_result)
+#   puts first_result['thumb_up']                                                    # add a thumbs up image to first result as placed in the database above
+# else
+#   puts 'No results found.'                                                         # if first result isn't found, print 'No results found.'
+# end
 # def task1
 #   5.times do |i|
 #     puts "Task 1 - Iteration #{i}"
@@ -1092,3 +1092,17 @@ end
 # t5.join
 
 # puts "Both tasks are done!"
+# 
+# QUESTION 1
+# Read about the Ruby begin and rescue keywords to handle exceptions:
+# https://docs.ruby-lang.org/en/3.2/syntax/exceptions_rdoc.html
+# Then write a program that would crash because of a division by zero error.
+# Instead of crashing with a normal error message, the program should instead
+# print "You cannot divide by zero" to the terminal.
+# 
+[0].map do |i| 
+puts 10 / i
+rescue ZeroDivisionError
+ puts "You cannot divide by zero"
+end
+#=> [nil, 10, 5]
