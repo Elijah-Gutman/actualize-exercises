@@ -986,13 +986,13 @@
 # where the length of each string is 4 or fewer letters.
 # Then run the method and print the result.
 # 
-arr= ["bigger", "and", "smaller", "words", "Bros"]
-def shorten(word)
-  word
-end
-pp shorten(arr).find_all {|l| l.size <= 4}
-# OR
-pp shorten(arr).select { |n| n.size <= 4 }
+# arr= ["bigger", "and", "smaller", "words", "Bros"]
+# def shorten(word)
+#   word
+# end
+# pp shorten(arr).find_all {|l| l.size <= 4}
+# # OR
+# pp shorten(arr).select { |n| n.size <= 4 }
 # index = 0
 # shorter_words=[]
 # while index < arr.size
@@ -1001,3 +1001,94 @@ pp shorten(arr).select { |n| n.size <= 4 }
 # end
 
 # pp shorter_words
+# QUESTION 1
+# The following code uses the sqlite3 Ruby library.
+# First read the library documentation: https://github.com/sparklemotion/sqlite3-ruby 
+# Then write comments next to each line explaining what you think the code is doing.
+require 'sqlite3'                                                                  # load sqlitw3 dpeendancies
+
+db = SQLite3::Database.open 'test.db'                                              # open up a database and name it 'test.db'
+db.results_as_hash = true                                                          # have results input into a hash
+db.execute "CREATE TABLE IF NOT EXISTS images(path TEXT, thumbs_up INT)"           # create a table that says "CREATE TABLE IF NOT EXISTS images(path TEXT, thumbs_up INT)"
+
+image_path = 'image1.png'                                                          # create a path to a local image
+results = db.query "SELECT path, thumbs_up FROM images WHERE path=?", image_path   # set the results of variable to search the inside of the database for the local image
+
+first_result = results.next                                                        # oddly enough make the first result equal to the subsequent value of results
+if first_result                                                                    #  if first_result is true (search for first_result)
+  puts first_result['thumb_up']                                                    # add a thumbs up image to first result as placed in the database above
+else
+  puts 'No results found.'                                                         # if first result isn't found, print 'No results found.'
+end
+# def task1
+#   5.times do |i|
+#     puts "Task 1 - Iteration #{i}"
+#     sleep(1)  # Simulate a time-consuming task
+#   end
+# end
+
+# def task2
+#   5.times do |i|
+#     def task2
+#       5.times do |i|
+#         puts "Task 2 - Iteration #{i}"
+#         sleep(1)  # Simulate a time-consuming task
+      
+    
+    
+#     def task6
+#       5.times do |i|
+#         puts "Task 6 - Iteration #{i}"
+#         sleep(1)  # Simulate a time-consuming task
+#       end
+#     end
+#   end 
+#     # Create two threads to run the tasks concurrently
+#     t6 = Thread.new { task6 }
+    
+    
+#     # Wait for both threads to complete
+#     t6.join
+    
+    
+    
+#     puts "Task 6 - Iteration #{i}"
+#     sleep(1)  # Simulate a time-consuming task
+#     end
+#   end
+# end
+
+# def task3
+#   5.times do |i|
+#     puts "Task 3 - Iteration #{i}"
+#     sleep(1)  # Simulate a time-consuming task
+#   end
+# end
+# def task4
+#   5.times do |i|
+#     puts "Task 4 - Iteration #{i}"
+#     sleep(1)  # Simulate a time-consuming task
+#   end
+# end
+# def task5
+#   5.times do |i|
+#     puts "Task 5 - Iteration #{i}"
+#     sleep(1)  # Simulate a time-consuming task
+#   end
+# end
+
+# # Create two threads to run the tasks concurrently
+# t1 = Thread.new { task1 }
+# t2 = Thread.new { task2 }
+# t3 = Thread.new { task3 }
+# t4 = Thread.new { task4 }
+# t5 = Thread.new { task5 }
+
+# # Wait for both threads to complete
+# t1.join
+# t2.join
+# t3.join
+# t4.join
+# t5.join
+
+# puts "Both tasks are done!"
