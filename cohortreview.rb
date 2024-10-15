@@ -944,14 +944,40 @@
 # The following code uses the money Ruby library.
 # First read the library documentation: https://github.com/RubyMoney/money 
 # Then write comments next to each line explaining what you think the code is doing.
-require "money"                          # load the dependancy
+# require "money"                          # load the dependancy
 
-I18n.enforce_available_locales = false   # set the location as non important
-I18n.locale = :en                        # slects english for the markation and delimiter (readabillity of user)
-Money.default_currency = "USD"           #  sets the default currency to USD
-Money.add_rate("CAD", "USD", 0.8)        #  sets the exchanged rate from CAD to USD
+# I18n.enforce_available_locales = false   # set the location as non important
+# I18n.locale = :en                        # slects english for the markation and delimiter (readabillity of user)
+# Money.default_currency = "USD"           #  sets the default currency to USD
+# Money.add_rate("CAD", "USD", 0.8)        #  sets the exchanged rate from CAD to USD
 
-money1 = Money.new(1000)                 # sets the object money1 with the value of 1000 cents USD since USD is the default currency
-money2 = Money.new(500, "CAD")           # sets the object money2 with the value 500 canadian cents and exchanges them 
-result = money1 + money2                 #  adds the values together
-puts "Total: #{result}"                  #  prints the result (14.00 USD because of exchange rate referenced above )
+# money1 = Money.new(1000)                 # sets the object money1 with the value of 1000 cents USD since USD is the default currency
+# money2 = Money.new(500, "CAD")           # sets the object money2 with the value 500 canadian cents and exchanges them 
+# result = money1 + money2                 #  adds the values together
+# puts "Total: #{result}"                  #  prints the result (14.00 USD because of exchange rate referenced above )
+# 
+# QUESTION 1
+# Read about the Ruby select method: https://www.rubyguides.com/2019/04/ruby-select-method/ 
+# Then write a program that uses the select method with an array of strings 
+# to create a new array with only the strings that start with the letter "a".
+# 
+#
+fruits = %w(apple orange banana)
+fruits2 =  fruits.select { |fruit| fruit.start_with? "a" }
+pp fruits2
+
+
+
+
+# stock = {
+#   apples: 10,
+#   oranges: 5,
+#   bananas: 1
+# }
+
+# kicks= stock.select { |k, v| v < 1 }
+# pp kicks
+
+
+# # {:apples=>10, :oranges=>5}
+# 
