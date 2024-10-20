@@ -1100,9 +1100,21 @@
 # Instead of crashing with a normal error message, the program should instead
 # print "You cannot divide by zero" to the terminal.
 # 
-[0].map do |i| 
-puts 10 / i
-rescue ZeroDivisionError
- puts "You cannot divide by zero"
+# [0].map do |i| 
+# puts 10 / i
+# rescue ZeroDivisionError
+#  puts "You cannot divide by zero"
+# end
+# #=> [nil, 10, 5]
+
+# QUESTION 1
+# Write a method that takes in the person hash below and increases the age by 1.
+# Then run the method and print the person hash to see if the hash was changed.
+person = { name: "Shawn", age: 25 }
+
+def personal_increment(person_value)
+  person_value[:age] +=1
 end
-#=> [nil, 10, 5]
+personal_increment(person)
+
+pp person
