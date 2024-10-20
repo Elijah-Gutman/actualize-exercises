@@ -1110,11 +1110,36 @@
 # QUESTION 1
 # Write a method that takes in the person hash below and increases the age by 1.
 # Then run the method and print the person hash to see if the hash was changed.
-person = { name: "Shawn", age: 25 }
+# person = { name: "Shawn", age: 25 }
 
-def personal_increment(person_value)
-  person_value[:age] +=1
+# def personal_increment(person_value)
+#   person_value[:age] +=1
+# end
+# personal_increment(person)
+
+# pp person
+# 
+
+# QUESTION 1
+# Write a method that takes in the array of hashes below 
+# and returns a new array of strings from the model of each item. 
+# Then run the method and print the result.
+cars = [
+  { "make" => "Toyota", "model" => "Corolla", "year" => 2018 },
+  { "make" => "Honda", "model" => "Civic", "year" => 2020 },
+  { "make" => "Ford", "model" => "Mustang", "year" => 2019 }
+]
+
+def extract_models(car_models)
+  car_models.map { |x| x["model"] }
 end
-personal_increment(person)
 
-pp person
+
+
+
+
+models = extract_models(cars)
+pp models
+numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8 ,9]
+# pp cars[0]["model"]
+pp numbers[0...]
