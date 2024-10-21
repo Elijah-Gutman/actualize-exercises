@@ -1147,19 +1147,38 @@
 # Use a nested loop with two arrays of strings to create a new array of strings with each string combined.
 # For example, ["a", "b", "c"] and ["d", "e", "f", "g"] 
 # becomes ["ad", "ae", "af", "ag", "bd", "be", "bf", "bg", "cd", "ce", "cf", "cg"].
-arr1= ["a", "b", "c"]
-arr2 = ["d", "e", "f", "g"]
+# arr1= ["a", "b", "c"]
+# arr2 = ["d", "e", "f", "g"]
 
+# index1 = 0
+
+# combined_arr = []
+
+# while index1 < arr1.length
+#   index2 = 0
+#   while index2 < arr2.length
+#     combined_arr << arr1[index1] + arr2[index2]
+#     index2 = index2 + 1
+#   end
+#   index1 = index1 + 1
+# end
+# pp combined_arr
+
+# For example, ["a", "b", "c", "d"] becomes 
+# ["ab", "ac", "ad", "ba", "bc", "bd", "ca", "cb", "cd", "da", "db", "dc"].
+
+arr= ["a", "b", "c", "d"]
+arr2 = []
 index1 = 0
 
-combined_arr = []
-
-while index1 < arr1.length
-  index2 = 0
-  while index2 < arr2.length
-    combined_arr << arr1[index1] + arr2[index2]
+while index1 < arr.length
+  index2 = 0 
+  while index2 < arr.length
+    if index1 != index2
+            arr2 << arr[index1] + arr[index2]
+    end 
     index2 = index2 + 1
   end
   index1 = index1 + 1
 end
-pp combined_arr
+pp arr2
