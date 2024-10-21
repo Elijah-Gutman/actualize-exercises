@@ -1,0 +1,7 @@
+h1{
+color: rgb(0, 0, 0);
+font-size: 75px;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+background-image: repeating-radial-gradient(ellipse at center, red, yellow 10px, green 20px);
+border-radius: 10px; 
+}
