@@ -1124,22 +1124,42 @@
 # Write a method that takes in the array of hashes below 
 # and returns a new array of strings from the model of each item. 
 # Then run the method and print the result.
-cars = [
-  { "make" => "Toyota", "model" => "Corolla", "year" => 2018 },
-  { "make" => "Honda", "model" => "Civic", "year" => 2020 },
-  { "make" => "Ford", "model" => "Mustang", "year" => 2019 }
-]
+# cars = [
+#   { "make" => "Toyota", "model" => "Corolla", "year" => 2018 },
+#   { "make" => "Honda", "model" => "Civic", "year" => 2020 },
+#   { "make" => "Ford", "model" => "Mustang", "year" => 2019 }
+# ]
 
-def extract_models(car_models)
-  car_models.map { |x| x["model"] }
+# def extract_models(car_models)
+#   car_models.map { |x| x["model"] }
+# end
+
+
+
+
+
+# models = extract_models(cars)
+# pp models
+# numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8 ,9]
+# # pp cars[0]["model"]
+# pp numbers[0...]
+# 
+# Use a nested loop with two arrays of strings to create a new array of strings with each string combined.
+# For example, ["a", "b", "c"] and ["d", "e", "f", "g"] 
+# becomes ["ad", "ae", "af", "ag", "bd", "be", "bf", "bg", "cd", "ce", "cf", "cg"].
+arr1= ["a", "b", "c"]
+arr2 = ["d", "e", "f", "g"]
+
+index1 = 0
+
+combined_arr = []
+
+while index1 < arr1.length
+  index2 = 0
+  while index2 < arr2.length
+    combined_arr << arr1[index1] + arr2[index2]
+    index2 = index2 + 1
+  end
+  index1 = index1 + 1
 end
-
-
-
-
-
-models = extract_models(cars)
-pp models
-numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8 ,9]
-# pp cars[0]["model"]
-pp numbers[0...]
+pp combined_arr
