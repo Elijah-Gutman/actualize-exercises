@@ -1203,24 +1203,54 @@
 #
 # Use a nested loop to find the largest sum of any two different numbers within an array.
 # For example, [1, 8, 3, 10] becomes 18.
-numbers= [1, 8, 3, 10]
-max_product = numbers[0] + numbers[1]
-index1 = 0
+# FIRST TRY!!! BOOM!!! 
+# numbers= [1, 8, 3, 10]
+# max_product = numbers[0] + numbers[1]
+# index1 = 0
 
-while index1 < numbers.length
-  current_number = numbers[index1]
-  index2 = 0
+# while index1 < numbers.length
+#   current_number = numbers[index1]
+#   index2 = 0
 
-  while index2 < numbers.length
-    if numbers[index1] != numbers[index2]
-      other_number = numbers[index2]
-      product = current_number + other_number
-      if product > max_product
-        max_product = product
-      end
+#   while index2 < numbers.length
+#     if numbers[index1] != numbers[index2]
+#       other_number = numbers[index2]
+#       product = current_number + other_number
+#       if product > max_product
+#         max_product = product
+#       end
+#     end
+#     index2 = index2 + 1
+#   end
+#   index1 = index1 + 1
+# end
+# pp max_product
+# QUESTION 1
+# Write a method that takes in an array of numbers 
+# and returns a count of how many times the number 100 appeared in the array. 
+# Then run the method and print the result.
+ 
+numbers = [200, 300, 100, 400, 100]
+
+def check_number(num)
+  index = 0
+  count = 0
+  while index < num.length
+    if num[index] == 100
+      count = count + 1
     end
-    index2 = index2 + 1
+    index = index + 1
   end
-  index1 = index1 + 1
+  puts count
 end
-pp max_product
+check_number(numbers)
+# numbers.select {|x| x == 100}
+
+
+# index = 0
+# new_numbers= []
+# while index < counting(numbers).length
+#   new_numbers << counting(numbers[index])
+#     index = index + 1
+# end 
+# pp new_numbers
