@@ -16,3 +16,8 @@ while (index1 < numbers.length ){
 
 }
 console.log(max_sum)
+var numbers1 = [1, 2, 3] 
+var  t = numbers1.map(function(num) {
+    return num * 2;
+  });
+  console.log(t)
