@@ -1230,20 +1230,20 @@
 # and returns a count of how many times the number 100 appeared in the array. 
 # Then run the method and print the result.
  
-numbers = [200, 300, 100, 400, 100]
+# numbers = [200, 300, 100, 400, 100]
 
-def check_number(num)
-  index = 0
-  count = 0
-  while index < num.length
-    if num[index] == 100
-      count = count + 1
-    end
-    index = index + 1
-  end
-  puts count
-end
-check_number(numbers)
+# def check_number(num)
+#   index = 0
+#   count = 0
+#   while index < num.length
+#     if num[index] == 100
+#       count = count + 1
+#     end
+#     index = index + 1
+#   end
+#   puts count
+# end
+# check_number(numbers)
 # numbers.select {|x| x == 100}
 
 
@@ -1254,3 +1254,14 @@ check_number(numbers)
 #     index = index + 1
 # end 
 # pp new_numbers
+
+
+# QUESTION 1
+# Write a method that takes in three strings and uses string interpolation 
+# to return all three strings combined with spaces in between as a single string. 
+# Then run the method and print the result.
+# 
+def interpolate(word1, word2, word3)
+  word1 + " " + word2 + " " + word3
+end
+pp interpolate("Why", "hello", "there")
