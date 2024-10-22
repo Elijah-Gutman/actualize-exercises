@@ -1188,13 +1188,39 @@
 # If the number is greater than 9000, it will print "BIG" to the screen.
 # Otherwise, it will print "SMALL" to the screen.
 # Then run the method to see the result.
-puts "what is your power level"
-power_level= gets.chomp.to_i
-def check_power_level(level)
-  if level > 9000
-    puts "BIG"
-  else
-    puts "SMALL"
+# puts "what is your power level"
+# power_level= gets.chomp.to_i
+# def check_power_level(level)
+#   if level > 9000
+#     puts "BIG"
+#   else
+#     puts "SMALL"
+#   end
+# end
+# check_power_level(power_level)
+# 
+#
+#
+# Use a nested loop to find the largest sum of any two different numbers within an array.
+# For example, [1, 8, 3, 10] becomes 18.
+numbers= [1, 8, 3, 10]
+max_product = numbers[0] + numbers[1]
+index1 = 0
+
+while index1 < numbers.length
+  current_number = numbers[index1]
+  index2 = 0
+
+  while index2 < numbers.length
+    if numbers[index1] != numbers[index2]
+      other_number = numbers[index2]
+      product = current_number + other_number
+      if product > max_product
+        max_product = product
+      end
+    end
+    index2 = index2 + 1
   end
+  index1 = index1 + 1
 end
-check_power_level(power_level)
+pp max_product
