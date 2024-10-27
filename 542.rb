@@ -17,11 +17,11 @@
 
 numbers = [1,2,3, 100, 102, 100]
 
-def check_number(numbers)
+def check_number(num)
   index = 0
   count = 0
   while index < numbers.length
-    if numbers[index] == 100
+    if num[index] == 100
       count = count + 1
     end
     index = index + 1

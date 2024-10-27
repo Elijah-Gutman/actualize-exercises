@@ -1261,7 +1261,7 @@
 # to return all three strings combined with spaces in between as a single string. 
 # Then run the method and print the result.
 # 
-def interpolate(word1, word2, word3)
-  word1 + " " + word2 + " " + word3
-end
-pp interpolate("Why", "hello", "there")
+# def interpolate(word1, word2, word3)
+#   word1 + " " + word2 + " " + word3
+# end
+# pp interpolate("Why", "hello", "there")
