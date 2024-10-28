@@ -4,7 +4,7 @@ class ShoppingCart {
     }
   
     addItem(item) {
-      this.items.splice(1, 1, item);
+      this.items.splice(1, 0, item);
     }
   
     removeItem(item) {
